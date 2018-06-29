@@ -1,0 +1,23 @@
+.m-breadcrumb {
+  padding: 10px 0;
+  background-color: $border;
+  margin-bottom: 30px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    & + & {
+      &::before {
+        content: '>';
+        display: inline-block;
+        margin: 0 9px;
+      }
+    }
+  }
+  &__link {
+    &, &:hover {
+      color: $gray-9;
+    }
+  }
+}

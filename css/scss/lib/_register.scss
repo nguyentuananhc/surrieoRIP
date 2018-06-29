@@ -1,0 +1,83 @@
+.m-register {
+  background: url('../images/register-bg.png') no-repeat;
+  background-size: cover;
+  color: $white;
+  font-family: $open-sans;
+  &::before {
+    background: url('../images/register-filter-bg.png');
+    opacity: 0.7;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 28px 0;
+  }
+  &__left {
+    width: 285px;
+    border-right: 4px dotted $white;
+    margin-right: 80px;
+  }
+  &__right {
+    flex: 1 0 0;
+  }
+  &__heading {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  &__number {
+    font-family: $avo;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    flex: 1 0 0;
+    border: 1px solid $border;
+    padding: 14px 19px 15px;
+  }
+  &__btn {
+    background-color: $blue;
+    color: $white;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 0;
+    padding: 8px 23px 7px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-left: 10px;
+  }
+  @media (max-width: 991px) {
+    &__left {
+      width: 100%;
+      margin-right: 0;
+      border-right: 0;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 3px dotted $white;
+    }
+    &__heading {
+      text-align: center;
+    }
+    &__number {
+      text-align: center;
+    }
+  }
+  @media (max-width: 575px) {
+    &__form {
+      flex-wrap: wrap;
+    }
+    &__input {
+      flex: 0 0 100%;
+    }
+    &__btn {
+      margin: 15px auto 0;
+    }
+  }
+}

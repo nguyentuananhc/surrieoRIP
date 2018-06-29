@@ -1,0 +1,287 @@
+.shine-eff {
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.3) 40%,
+      rgba(255,255,255,.1) 45%,
+      rgba(255,255,255,0.3) 90%,
+      rgba(255,255,255,0) 100%);
+    z-index: 1000;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    transform-origin: left bottom;
+    transform: skewY(-30deg);
+    transition: bottom 0s;
+  }
+  &:hover::after {
+    bottom: -100%;
+    transition: bottom .35s;
+  }
+}
+.m-heading {
+  font-family: $open-condensed;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  margin: 8px 0 32px;
+}
+.m-heading-2 {
+  font-family: $open-condensed;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3.6px;
+  line-height: 36px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+.m-btn {
+  display: inline-block;
+  padding: 17px 29px;
+  text-transform: uppercase;
+  font-family: $open-condensed;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2.4px;
+  color: $white;
+  background-color: $green-darker;
+  transition: background-color .3s;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background-color: $text-color;
+  }
+}
+.cl-hover {
+  color: $text-color;
+  transition: color .3s;
+  &:hover {
+    color: $green-darker;
+  }
+}
+// limit line
+.limit-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  &--2 {
+    -webkit-line-clamp: 2;
+  }
+  &--3 {
+    -webkit-line-clamp: 3;
+  }
+  &--4 {
+    -webkit-line-clamp: 4;
+  }
+}
+// display flex
+.df {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.df-nowrap {
+  flex-wrap: no-wrap;
+}
+.df-stretch {
+  align-items: stretch;
+}
+.flex-fluid {
+  flex: 1 0 0;
+}
+// some thing mini
+.mn-time {
+  font-size: 12px;
+  color: $gray-9;
+  margin-bottom: 0;
+  &::before {
+    content: '\f017';
+    font-family: 'FontAwesome';
+    margin-right: 6px;
+  }
+  &.f-14 {
+    font-size: 14px;
+  }
+  &.date::before {
+    content: '\f073';
+  }
+}
+.img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  &-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.img-100 {
+  width: 100%;
+}
+// box smtg
+// /////////////////////////
+.m-text-box {
+  padding-bottom: 20px;
+  &--border {
+    border: 1px solid $border;
+    padding: 25px;
+  }
+  & > p {
+    margin-bottom: 0;
+    text-align: justify;
+  }
+  & > img {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+// wrap object
+/////////////////////////////
+.wrap-o {
+  position: relative;
+  > iframe,
+  > object,
+  > embed,
+  > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+  &--yt { // wrap youtube
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
+  }
+}
+// list-style-reset
+////////////////////////////////////
+.m-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+// text style
+///////////////////////////////
+.t-12 {
+  font-size: 12px;
+}
+.t-14 {
+  font-size: 14px;
+}
+.t-16 {
+  font-size: 16px;
+}
+.t-bold {
+  font-size: bold;
+}
+.t-italic {
+  font-style: italic;
+}
+.t-uppercase {
+  text-transform: uppercase;
+}
+.t-left {
+  text-align: left;
+}
+.t-right {
+  text-align: right;
+}
+.t-center {
+  text-align: center;
+}
+.t-justify {
+  text-align: justify;
+}
+// sizing
+/////////////////////////////////////////
+// margin
+.mx--15 {
+  margin: 0 -15px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-last-0 {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// padding
+.px-15 {
+  padding: 0 15px;
+}
+.pb-30 {
+  padding-bottom: 30px;
+}
+.pb-last-0 {
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+// color
+/////////////////////////////////////////////
+.cl-text {
+  color: $text-color;
+}
+.cl-white {
+  color: #fff;
+}
+.cl-black {
+  color: #000;
+}
+.cl-inherit {
+  &, &:hover {
+    color: inherit;
+  }
+}
+// border
+/////////////////////////////////////////
+.bd-1 {
+  border: 1px solid $border;
+}
+.bd-0 {
+  border: 0;
+}
+.bb-1 {
+  border-bottom: 1px solid $border;
+}
+// Filter
+////////////////////////////
+.ft {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+  }
+}
